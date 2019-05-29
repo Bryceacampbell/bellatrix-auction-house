@@ -1,3 +1,57 @@
+body {
+  font-family: 'Judson', serif;
+ }
+ 
+ h1, h2, h3, h4, h5, h6 {
+  font-family: 'Archivo Black', sans-serif;
+ }
+
 .list-group-item {
   line-height: 2.5;
+}
+header .jumbotron {
+  padding: 2rem;
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  border-bottom: 1px #ffffff solid;
+  margin-bottom: 0px;
+}
+
+.hero-img {
+  color: white;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+  url("https://www.indexexchange.com/wp-content/uploads/2019/03/header-bidding-auction-ss-1920_uusz3n.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  opacity: 1.0;
+}
+
+
+.btn-circle.btn-xl {
+  width: 150px;
+  height: 150px;
+  padding: 10px 10px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 75px;
+  margin: 10px;
+}
+
+#product-display {
+  margin-top: 30px;
+  border: 1px solid #777777;
+  height: 200px;
+}
+.container-header {
+  background: #d9534f;
+  color: #ffffff;
+  border-bottom: 1px solid #777777;
+}
+
+.auth-buttons {
+  margin: 20px 0px 0px 0px;
+  align-content: flex-end;
 }
