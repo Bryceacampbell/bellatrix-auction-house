@@ -20,7 +20,7 @@ header .jumbotron {
 
 .hero-img {
   color: white;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
   url("https://www.indexexchange.com/wp-content/uploads/2019/03/header-bidding-auction-ss-1920_uusz3n.gif");
   background-position: center;
   background-repeat: no-repeat;
