@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // For Passport
-app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })); // session secret
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
@@ -33,13 +33,13 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-var authRoute = require('./routes/auth.js')(app,passport);
+require("./routes/auth.js")(app, passport);
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 //load passport strategies
 var models = require("./models");
-require('./config/passport/passport.js')(passport, models.user);
+require("./config/passport/passport.js")(passport, models.user);
 
 var syncOptions = { force: false };
 
@@ -50,8 +50,8 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function () {
-  app.listen(PORT, function () {
+db.sequelize.sync(syncOptions).then(function() {
+  app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
