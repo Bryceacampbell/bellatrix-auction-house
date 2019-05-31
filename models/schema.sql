@@ -1,5 +1,3 @@
-DROP DATABASE IF EXISTS bellatrix_db;
-CREATE DATABASE bellatrix_db;
+DROP DATABASE IF EXISTS bellatrixdb;
+CREATE DATABASE bellatrixdb;
 
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
