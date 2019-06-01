@@ -1,3 +1,2 @@
 DROP DATABASE IF EXISTS bellatrixdb;
 CREATE DATABASE bellatrixdb;
-
