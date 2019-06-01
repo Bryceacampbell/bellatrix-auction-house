@@ -1,12 +1,14 @@
 module.exports = function(sequelize, DataTypes) {
   var Product = sequelize.define("Product", {
     name: DataTypes.STRING,
-    description: DataTypes.TEXT,
     category: DataTypes.STRING,
+    productId: DataTypes.INTEGER,
     startingBid: DataTypes.INTEGER,
     currentBid: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,
-    description: DataTypes.TEXT
+    description: DataTypes.TEXT,
+    auctionEnd: DataTypes.STRING,
+    imageUrl: DataTypes.TEXT
   });
   return Product;
 };
