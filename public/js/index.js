@@ -113,16 +113,17 @@ var handleDeleteBtnClick = function() {
 };
 
 // Upload image
-$(function () {
+$(function() {
   $("#fileupload").fileupload({
     url: "https://vgy.me/upload",
     dataType: "json",
-    done: function (data) {
+    done: function(data) {
       // single-file upload
       if (typeof data.result.url !== "undefined") {
         // replaces upload input when image has been uploaded
         $("<p/>")
-          .text("Image uploaded").replaceAll("#fileupload");
+          .text("Image uploaded")
+          .replaceAll("#fileupload");
         $imageLink = data.result.image;
       }
     }
