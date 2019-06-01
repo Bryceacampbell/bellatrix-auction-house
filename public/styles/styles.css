@@ -54,3 +54,8 @@ header .jumbotron {
   margin: 20px 0px 0px 0px;
   align-content: flex-end;
 }
+
+.btn-cat {
+  width: 10px;
+  height: 10px;
+}

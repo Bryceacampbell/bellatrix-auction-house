@@ -2,14 +2,14 @@
   "development": {
     "username": "root",
     "password": "password",
-    "database": "bellatrix_db",
+    "database": "bellatrixdb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "password",
-    "database": "bellatrix_db",
+    "database": "bellatrixdb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false

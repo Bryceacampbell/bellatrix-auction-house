@@ -6,7 +6,9 @@ module.exports = function(sequelize, DataTypes) {
     startingBid: DataTypes.INTEGER,
     currentBid: DataTypes.INTEGER,
     userId: DataTypes.INTEGER,
-    description: DataTypes.TEXT
+    description: DataTypes.TEXT,
+    auctionEnd: DataTypes.STRING,
+    imageUrl: DataTypes.TEXT
   });
   return Product;
 };
