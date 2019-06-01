@@ -17,7 +17,9 @@ module.exports = function(app) {
 
   // Delete an Product by id
   app.delete("/api/products/:id", function(req, res) {
-    db.Product.destroy({ where: { id: req.params.id } }).then(function(dbProducts) {
+    db.Product.destroy({ where: { id: req.params.id } }).then(function(
+      dbProducts
+    ) {
       res.json(dbProducts);
     });
   });
