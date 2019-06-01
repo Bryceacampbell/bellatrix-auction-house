@@ -1,19 +1,20 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
+var $productName = $("#product-name");
+var $productDescription = $("#product-description");
+var $startingPrice = $("#starting-price");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  createProduct: function(product) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
+      url: "/api/products",
+      data: JSON.stringify(product)
     });
   },
   getExamples: function() {
@@ -64,22 +65,27 @@ var refreshExamples = function() {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-  var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+  var product = {
+    name: $productName.val(),
+    description: $productDescription.val(),
+    startingBid: $startingPrice.val()
   };
 
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
+  console.log(product);
+
+  if (!(product.name && product.description && product.startingBid)) {
+    alert("You must enter information for all fields");
     return;
   }
 
-  API.saveExample(example).then(function() {
-    refreshExamples();
+  API.createProduct(product).then(function() {
+    // refreshExamples();
+    console.log("product created");
   });
 
-  $exampleText.val("");
-  $exampleDescription.val("");
+  $productName.val("");
+  $productDescription.val("");
+  $startingPrice.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked

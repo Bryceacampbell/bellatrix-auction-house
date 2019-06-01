@@ -1,4 +1,4 @@
-// var db = require("../models");
+var db = require("../models");
 
 module.exports = function(app) {
   // Get all Products
@@ -10,12 +10,13 @@ module.exports = function(app) {
 
   // Create a new Product
   app.post("/api/products", function(req, res) {
+    console.log(req.body);
     db.Product.create(req.body).then(function(dbProducts) {
       res.json(dbProducts);
     });
   });
 
-  // Delete an Product by id
+  // Delete a Product by id
   app.delete("/api/products/:id", function(req, res) {
     db.Product.destroy({ where: { id: req.params.id } }).then(function(
       dbProducts
