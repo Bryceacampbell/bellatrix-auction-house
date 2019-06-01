@@ -1,4 +1,7 @@
-USE bellatrixdb;
+DROP DATABASE IF EXISTS bellatrix_db;
+CREATE DATABASE bellatrix_db;
+
+USE bellatrix_db;
 
 -- Section I --
 

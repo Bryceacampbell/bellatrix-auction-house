@@ -5,24 +5,36 @@
         </div>
         <div class="card-body">
             <form id="add" name="add" method="post" action="/add">
-            <div class="form-group">
-                <label for="name">Product Name</label>
-                <input class="form-control" name="name" id="product-name" type="text" />
-            </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <input class="form-control" name="description" id="product-description" type="text" />
-            </div>
-            <div class="form-group">
-                <label for="starting-price">Starting bid</label>
-                <input class="form-control" name="starting-price" id="starting-price" type="text" />
-            </div>
-            <div class="form-group">
-                <label for="image-upload">Upload Image</label>
-                <input class="form-control" name="image-upload" type="text" />
-            </div>
+                <div class="form-group">
+                    <label for="name">Product Name</label>
+                    <input class="form-control" name="name" id="product-name" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input class="form-control" name="description" id="product-description" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="product-category">Category</label>
+                    <select class="form-control" id="product-category">
+                        <option><strong>Choose One..</strong></option>
+                        <option>Antiques</option>
+                        <option>Apparel</option>
+                        <option>Appliances</option>
+                        <option>Electronics</option>
+                        <option>Home Goods</option>
+                        <option>Jewelery</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="starting-price">Starting bid</label>
+                    <input class="form-control" name="starting-price" id="starting-price" type="text" />
+                </div>
+                <div class="form-group">
+                    <label for="image-upload">Upload Image</label>
+                    <input class="form-control" name="image-upload" type="text" />
+                </div>
 
-                <input class="btn btn-primary" type="submit" id="submit" value="Submit"/>
+                <input class="btn btn-primary" type="submit" id="submit" value="Submit" />
             </form>
         </div>
     </div>
