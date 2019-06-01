@@ -4,6 +4,7 @@ var $productDescription = $("#product-description");
 var $productCategory = $("#product-category");
 var $startingPrice = $("#starting-price");
 var $submitBtn = $("#submit");
+var $imageLink;
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -69,7 +70,8 @@ var handleFormSubmit = function(event) {
     name: $productName.val(),
     description: $productDescription.val(),
     category: $productCategory.val(),
-    startingBid: $startingPrice.val()
+    startingBid: $startingPrice.val(),
+    imageUrl: $imageLink
   };
 
   console.log(product);
@@ -95,6 +97,7 @@ var handleFormSubmit = function(event) {
   $productDescription.val("");
   $productCategory.val("");
   $startingPrice.val("");
+  location.reload();
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
@@ -108,6 +111,24 @@ var handleDeleteBtnClick = function() {
     refreshExamples();
   });
 };
+
+// Upload image
+$(function() {
+  $("#fileupload").fileupload({
+    url: "https://vgy.me/upload",
+    dataType: "json",
+    done: function(data) {
+      // single-file upload
+      if (typeof data.result.url !== "undefined") {
+        // replaces upload input when image has been uploaded
+        $("<p/>")
+          .text("Image uploaded")
+          .replaceAll("#fileupload");
+        $imageLink = data.result.image;
+      }
+    }
+  });
+});
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
