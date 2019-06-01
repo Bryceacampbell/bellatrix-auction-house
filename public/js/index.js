@@ -1,9 +1,9 @@
 // Get references to page elements
 var $productName = $("#product-name");
 var $productDescription = $("#product-description");
+var $productCategory = $("#product-category");
 var $startingPrice = $("#starting-price");
 var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
 var $imageLink;
 
 // The API object contains methods for each kind of request we'll make
@@ -69,13 +69,21 @@ var handleFormSubmit = function(event) {
   var product = {
     name: $productName.val(),
     description: $productDescription.val(),
+    category: $productCategory.val(),
     startingBid: $startingPrice.val(),
     imageUrl: $imageLink
   };
 
   console.log(product);
 
-  if (!(product.name && product.description && product.startingBid)) {
+  if (
+    !(
+      product.name &&
+      product.description &&
+      product.startingBid &&
+      product.category
+    )
+  ) {
     alert("You must enter information for all fields");
     return;
   }
@@ -87,6 +95,7 @@ var handleFormSubmit = function(event) {
 
   $productName.val("");
   $productDescription.val("");
+  $productCategory.val("");
   $startingPrice.val("");
   location.reload();
 };
