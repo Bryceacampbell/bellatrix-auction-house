@@ -10,12 +10,12 @@
 <!--Category buttons===========================================================================-->
 <div class="container">
   <div class="row text-center">
-    <button type="button" class="btn btn-danger btn-circle btn-xl"><i class="">Antiques</i></button>
-    <button type="button" class="btn btn-danger btn-circle btn-xl"><i class="">Apparel</i></button>
-    <button type="button" class="btn btn-danger btn-circle btn-xl"><i class="">Appliances</i></button>
-    <button type="button" class="btn btn-danger btn-circle btn-xl"><i class="">Electronics</i></button>
-    <button type="button" class="btn btn-danger btn-circle btn-xl"><i class="">Home<br>Goods</i></button>
-    <button type="button" class="btn btn-danger btn-circle btn-xl"><i class="">Jewelery</i></button>
+    <button type="button" class="btn btn-danger btn-circle btn-xl" data-category="Antiques"><i>Antiques</i></button>
+    <button type="button" class="btn btn-danger btn-circle btn-xl" data-category="Apparel"><i>Apparel</i></button>
+    <button type="button" class="btn btn-danger btn-circle btn-xl" data-category="Appliances"><i>Appliances</i></button>
+    <button type="button" class="btn btn-danger btn-circle btn-xl" data-category="Electronics"><i>Electronics</i></button>
+    <button type="button" class="btn btn-danger btn-circle btn-xl" data-category="Home Goods"><i>Home<br>Goods</i></button>
+    <button type="button" class="btn btn-danger btn-circle btn-xl" data-category="Jewelery"><i>Jewelery</i></button>
   </div>
 </div>
 
@@ -27,8 +27,10 @@
       <input class="btn btn-primary" type="submit" value="Add Item" />
     </a>
   </div>
-  <div class="row">
-    <h2></h2>
+  <div id="display-content">
+    {{#each dbproducts}}
+      <h1>{{this.name}}</h1>
+    {{/each}}
   </div>
 </div>
 

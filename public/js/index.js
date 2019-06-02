@@ -18,9 +18,9 @@ var API = {
       data: JSON.stringify(product)
     });
   },
-  getExamples: function() {
+  getProducts: function(category) {
     return $.ajax({
-      url: "api/examples",
+      url: "api/products/" + category,
       type: "GET"
     });
   },
@@ -135,4 +135,16 @@ $(function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 
-// $exampleList.on("click", ".delete", handleDeleteBtnClick);
+$(document).on("click", ".btn-danger", function() {
+  var category = $(this).data("category");
+  console.log(category);
+
+  $.ajax("/api/products/" + category).then(function(results) {
+    console.log(results);
+    for (var i = 0; i < results.length; i++) {
+      var productName = results[i].name;
+      var productcategory = results[i].category;
+      var startingBid = results[i].startingBid;
+      var imgURL = results[i].imageUrl;
+  });
+});
