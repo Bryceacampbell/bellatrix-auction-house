@@ -117,7 +117,7 @@ $(function() {
   $("#fileupload").fileupload({
     url: "https://vgy.me/upload",
     dataType: "json",
-    done: function(data) {
+    done: function(err, data) {
       // single-file upload
       if (typeof data.result.url !== "undefined") {
         // replaces upload input when image has been uploaded
@@ -125,8 +125,10 @@ $(function() {
           .text("Image uploaded")
           .replaceAll("#fileupload");
         $imageLink = data.result.image;
+      } else {
+        throw err;
       }
-    }
+      }
   });
 });
 
