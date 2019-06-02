@@ -11,11 +11,19 @@ body {
 }
 header .jumbotron {
   padding: 2rem;
-  color: #fff;
   background-color: #d9534f;
   border-color: #d43f3a;
   border-bottom: 1px #ffffff solid;
   margin-bottom: 0px;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+header a:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .hero-img {
@@ -53,4 +61,8 @@ header .jumbotron {
 .auth-buttons {
   margin: 20px 0px 0px 0px;
   align-content: flex-end;
+}
+
+.product-img {
+  width: 100%;
 }

@@ -16,12 +16,12 @@ module.exports = function(app) {
     });
   });
 
-  // Delete a Product by id
-  app.delete("/api/products/:id", function(req, res) {
-    db.Product.destroy({ where: { id: req.params.id } }).then(function(
-      dbProducts
-    ) {
-      res.json(dbProducts);
-    });
+  // Get a Product by Category
+  app.get("/api/products/:category", function(req, res) {
+    db.Product.findAll({ where: { category: req.params.category } }).then(
+      function(dbProducts) {
+        res.json(dbProducts);
+      }
+    );
   });
 };
