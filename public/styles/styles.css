@@ -50,8 +50,9 @@ header a:hover {
 #product-display {
   margin-top: 30px;
   border: 1px solid #777777;
-  height: 200px;
+  height: 100%;
 }
+
 .container-header {
   background: #d9534f;
   color: #ffffff;
