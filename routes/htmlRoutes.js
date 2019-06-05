@@ -3,8 +3,8 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Product.findAll({}).then(function(data) {
-      res.render("index", { products: data });
+    db.Product.findAll({}).then(function() {
+      res.render("index");
     });
   });
 
