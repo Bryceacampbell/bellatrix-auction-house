@@ -67,3 +67,63 @@ header a:hover {
 .product-img {
   width: 100%;
 }
+
+/* Product Listing */
+
+.itemCard {
+  height: 265px;
+  padding: 10px;
+}       
+
+.itemButtons {
+  border-bottom: 2px dashed grey;
+  padding: 10px;
+  padding-bottom: 25px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+}
+      
+.smallImage {
+  float: right;
+  height: 250px;
+  border: 5px solid black;
+  border-radius: 5%;
+}
+
+
+.itemContent {
+  background-color: inherit;
+  float: left;
+  height: 240px;
+}
+
+.bid-btn {
+  float: center;
+  width: 150px;
+  border-radius: 5%;
+}
+
+.userId {
+  font-style: italic;
+}
+
+.description {
+  padding-top: 10px;
+}
+
+.currentBid, .auctionEnd, .bid-btn {
+  display: inline;
+}
+
+.currentBid {
+  float: left;
+}
+
+.auctionEnd {
+  float: center;
+}
+
+.bid-btn {
+  float: right;
+}
