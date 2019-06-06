@@ -1,14 +1,20 @@
-<div class="row">
-    <div class="col-lg-4">
-        <img src="{{imageUrl}}" class="product-img">
+<div class="itemCard">
+    <div class="itemContent">
+        <h1 class="title">{{name}}</h1>
+        <h4 class="category">{{category}}</h4>
+        <div class="userId">Posted by {{userId}}</div>
+        <div class="description">{{description}}</div>                    
     </div>
-    <div class="col-lg-4">
-        <h1>{{name}}</h1>
-        <p>{{description}}</p>
-    </div>
-    <div class="col-lg-4">
-        <h2>CurrentBid: {{currentBid}}</h2>
-    </div>
+    
+        <img src="{{imageUrl}}" class="smallImage" alt="IMAGE NOT FOUND">
+    
+</div>
+<div class="itemButtons">   
+    <div class="currentBid">Highest Bid: {{currentBid}}</div>
+    <div class="auctionEnd">Auction ends in {{auctionEnd}}</div>
+    
+    <button class="btn-danger bid-btn {{productId}}">Bid Now!</button>
+   
 </div>
 
 
