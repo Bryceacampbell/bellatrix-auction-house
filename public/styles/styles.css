@@ -73,63 +73,41 @@ header a:hover {
 }
 
 /* Product Listing */
-
 .itemCard {
-  height: 265px;
-  padding: 10px;
-}       
-
-.itemButtons {
-  border-bottom: 2px dashed grey;
-  padding: 10px;
-  padding-bottom: 25px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 150%;
+  border-bottom: 1px dashed gray;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
-      
-.smallImage {
-  float: right;
-  height: 250px;
-  width: 300px;
-}
-
-
 
 .itemContent {
-  background-color: inherit;
-  float: left;
-  height: 240px;
+  padding-left: 30px;
 }
 
-.bid-btn {
-  float: center;
-  width: 150px;
-  border-radius: 5%;
+.itemContent .title {
+  font-size: 300%;
+  font-weight: bold;
 }
 
-.userId {
+.itemContent .category {
+  color: grey;
   font-style: italic;
 }
 
-.description {
-  padding-top: 10px;
+.itemContent .userId {
+  font-size: 125%;
 }
 
-.currentBid, .auctionEnd, .bid-btn {
-  display: inline;
+.itemContent .description {
+  font-size: 150%;
 }
 
-.currentBid {
-  float: left;
+.mainImage {
+  height: 250px;
 }
 
-.auctionEnd {
-  float: center;
-}
-
-.bid-btn {
-  float: right;
+.itemButtons {
+  font-size: 125%;
+  padding-top: 10px; 
 }
 
 /* Modals */
@@ -140,12 +118,16 @@ header a:hover {
   text-align: center;
 }
 
+.modalCategory {
+  font-style: italic;
+  color: grey;
+}
+
 .enterTitle {
   font-size: 200%;
   font-weight: bold;
   border-bottom: 1px solid black;
   margin-bottom: 20px;
-
 }
 
 .usdIcon {
