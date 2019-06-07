@@ -131,3 +131,27 @@ header a:hover {
 .bid-btn {
   float: right;
 }
+
+/* Modals */
+
+.modal-body img, .modal-body .row .name {
+  margin-left: auto;
+  margin-right: auto;
+}
+.modal-body img {
+  height: 250px;
+}
+
+.modal-body .row .name {
+  text-align: center;
+  width: 100%;
+}
+
+.modal-body .row .category {
+   width: 100%;
+}
+
+.modal-body input {
+  width: 90%;
+  float: right;
+}
