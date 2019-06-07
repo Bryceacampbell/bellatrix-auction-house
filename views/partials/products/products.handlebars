@@ -4,7 +4,7 @@
         <h4 class="category">{{category}}</h4>
         <div class="userId">Posted by {{userId}}</div>
         <div class="description">{{description}}</div>
-    </div>
+</div>
 
     <img src="{{imageUrl}}" class="smallImage" alt="IMAGE NOT FOUND">
 
@@ -13,10 +13,8 @@
 <div class="itemButtons">   
     <div class="currentBid">Highest Bid: ${{currentBid}}</div>
     <div class="auctionEnd">Auction ends: {{auctionEnd}}</div>
+    <button class="btn-danger bid-btn" data-category="{{id}}" data-toggle="modal" data-target="#modal{{id}}">Bid Now!</button>
 </div>
-    
-<button class="btn-danger bid-btn" data-category="{{id}}" data-toggle="modal" data-target="#modal{{id}}">Bid Now!</button>
-
 <!-- Modal -->
 <div class="modal fade" id="modal{{id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
