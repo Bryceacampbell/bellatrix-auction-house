@@ -7,6 +7,7 @@ module.exports = function(sequelize, DataTypes) {
     userId: DataTypes.INTEGER,
     description: DataTypes.TEXT,
     auctionEnd: DataTypes.STRING,
+    active: DataTypes.BOOLEAN,
     imageUrl: DataTypes.TEXT
   });
   return Product;

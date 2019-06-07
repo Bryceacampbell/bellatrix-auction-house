@@ -24,4 +24,22 @@ module.exports = function(app) {
       }
     );
   });
+
+  // Bid on a Product
+  app.put("/api/products/:id", function(req, res) {
+    db.Product.update(
+      { currentBid: req.body.text },
+      {
+        where: {
+          id: req.body.id
+        }
+      }
+    )
+      .then(function(results) {
+        res.json(results);
+      })
+      .catch(function(error) {
+        res.json(error);
+      });
+  });
 };

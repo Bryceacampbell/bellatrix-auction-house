@@ -4,7 +4,10 @@ var $productDescription = $("#product-description");
 var $productCategory = $("#product-category");
 var $startingPrice = $("#starting-price");
 var $submitBtn = $("#submit");
+var $isActive = true;
 var $imageLink;
+var $submitBid = $("#submit-bid");
+var $currentBid = $("#new-bid");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -22,6 +25,12 @@ var API = {
     return $.ajax({
       url: "api/products/" + category,
       type: "GET"
+    });
+  },
+  bidOnProduct: function(id) {
+    return $.ajax({
+      url: "api/products/" + id,
+      type: "PUT"
     });
   },
   deleteExample: function(id) {
@@ -72,7 +81,11 @@ var handleFormSubmit = function(event) {
     category: $productCategory.val(),
     startingBid: $startingPrice.val(),
     currentBid: $startingPrice.val(),
-    imageUrl: $imageLink
+    imageUrl: $imageLink,
+    active: $isActive,
+    auctionEnd: moment()
+      .add(7, "days")
+      .format("MMM D, YYYY")
   };
 
   console.log(product);
@@ -133,5 +146,18 @@ $(function() {
   });
 });
 
+// Bid on product
+var bidOnProduct = function() {
+  if ($currentBid > this.id.currentBid) {
+    $("<div/>")
+      .text("Highest Bid: $" + $currentBid)
+      .replaceAll(".currentBid");
+  } else {
+    alert("Your bid is not high enough. Please enter a new bid.");
+    return;
+  }
+};
+
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
+$submitBid.on("click", bidOnProduct);
