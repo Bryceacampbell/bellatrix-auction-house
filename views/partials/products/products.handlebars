@@ -28,29 +28,38 @@
       </div>
       <div class="modal-body">
 
-        <div class="row"><img alt="Product Image Preview" src="{{imageUrl}}" /></div>
+      <div class="row">
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+        <img alt="Product Image Preview" class="col-sm-10 col-md-10 col-lg-10" src="{{imageUrl}}" />
+        <div class="col-sm-1 col-md-1 col-lg-1"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 modalName">{{name}}</div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 modalCategory">Category: {{category}}</div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 userId">Posted by: {{userId}}</div>
+      </div>
 
         <div class="row">
-          <h1 class="name">{{name}}</h1>
+          <div class="col-sm-12 col-md-12 col-lg-12 description">{{description}}</div>
         </div>
 
         <div class="row">
-          <h6 class="category">{{category}}</h6>
+          <div class="col-sm-12 col-md-12 col-lg-12 enterTitle">Enter your bid:</div>
         </div>
-
+        
         <div class="row">
-          <h5 class="userId">Posted by: {{userId}}</h5>
+          <div class="col-sm-6 col-md-6 col-lg-6 currentBid">Current Price: {{currentBid}}</div>
+          <div class="col-sm-1 col-md-1 col-lg-1 usdIcon"><i class="fa fa-usd"></i></div>
+          <input class="col-sm-5 col-md-5 col-lg-5" type="number" min="0.01" step="0.01" max="2500" class="row" type="text">
         </div>
-
-        <div class="row">
-          <p class="description">{{description}}</p>
-        </div>
-
-        <div class="row">
-          <h1 class="currentBid">Current Price: {{currentBid}}</h1>
-        </div>
-        <h5>Enter your bid: </h5>
-        <h2>$<input type="number" min="0.01" step="0.01" max="2500" class="row" type="text"></h2>
+        
 
       </div>
     
