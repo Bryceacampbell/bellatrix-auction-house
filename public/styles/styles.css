@@ -37,6 +37,10 @@ header a:hover {
   opacity: 1.0;
 }
 
+.add-btn {
+  margin-top: 20px;
+}
+
 
 .btn-circle.btn-xl {
   width: 150px;

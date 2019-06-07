@@ -3,20 +3,16 @@
         <h1 class="title">{{name}}</h1>
         <h4 class="category">{{category}}</h4>
         <div class="userId">Posted by {{userId}}</div>
-        <div class="description">{{description}}</div>                    
+        <div class="description">{{description}}</div>
     </div>
-    
-        <img src="{{imageUrl}}" class="smallImage" alt="IMAGE NOT FOUND">
-    
+
+    <img src="{{imageUrl}}" class="smallImage" alt="IMAGE NOT FOUND">
+
 </div>
-<div class="itemButtons">   
+<div class="itemButtons">
     <div class="currentBid">Highest Bid: {{currentBid}}</div>
     <div class="auctionEnd">Auction ends in {{auctionEnd}}</div>
-    
-    <button class="btn-danger bid-btn {{productId}}">Bid Now!</button>
-   
+    <button class="btn-danger bid-btn {{productId}}" data-toggle="modal" data-target="#exampleModal">Bid Now!</button>
 </div>
-
-
 
 
