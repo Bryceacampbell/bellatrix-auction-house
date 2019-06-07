@@ -91,8 +91,7 @@ header a:hover {
 .smallImage {
   float: right;
   height: 250px;
-  border: 5px solid black;
-  border-radius: 5%;
+  width: 300px;
 }
 
 
@@ -134,24 +133,23 @@ header a:hover {
 
 /* Modals */
 
-.modal-body img, .modal-body .row .name {
+.modal-image, .modal-name, .modal-cancel, .modal-submit {
   margin-left: auto;
   margin-right: auto;
 }
-.modal-body img {
+.modal-image {
   height: 250px;
 }
 
-.modal-body .row .name {
+.modal-name {
   text-align: center;
   width: 100%;
 }
 
-.modal-body .row .category {
+.modal-category {
    width: 100%;
 }
 
-.modal-body input {
-  width: 90%;
-  float: right;
+.modal-submit, .modal-cancel {
+  margin-bottom: 20px;
 }
