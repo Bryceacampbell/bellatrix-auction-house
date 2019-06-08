@@ -1,21 +1,33 @@
-<div class="itemCard">
-    <div class="itemContent">
-        <h1 class="title">{{name}}</h1>
-        <h4 class="category">{{category}}</h4>
-        <div class="userId">Posted by {{userId}}</div>
-        <div class="description">{{description}}</div>
+<div class="row itemCard">
+  <div class="row cardTop">
+
+    <div class="col-sm-8 col-md-8 col-lg-8 itemContent">
+      <div class="row col-sm-12 col-md-12 col-lg-12 title">{{name}}</div>
+      <div class="row col-sm-12 col-md-12 col-lg-12 category">{{category}}</div>
+      <div class="row col-sm-12 col-md-12 col-lg-12 userId">Posted by: {{userId}}</div>
+      <div class="row col-sm-12 col-md-12 col-lg-12 description">{{description}}</div>
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4 imageContent">
+      <img class=" col-sm-12 col-md-12 col-lg-12 mainImage" src="{{imageUrl}}" alt="IMAGE NOT FOUND">
+    </div>
+
+  </div> {{!-- close cardTop --}}
+
+<div class="row itemButtons">   
+    <div class="col-sm-1 col-md-1 col-lg-1"></div>
+    <div class="col-sm-3 col-md-3 col-lg-3 currentBidMain">Highest Bid: ${{currentBid}}</div>
+    <div class="col-sm-1 col-md-1 col-lg-1"></div>
+    <div class="col-sm-3 col-md-3 col-lg-3 auctionEnd">Auction ends: {{auctionEnd}}</div>
+    <div class="col-sm-1 col-md-1 col-lg-1"></div>
+    <button class="col-sm-2 col-md-2 col-lg-2 btn-danger bid-btn" data-toggle="modal" data-target="#modal{{id}}">Bid Now!</button>
+    <div class="col-sm-1 col-md-1 col-lg-1"></div>
 </div>
 
-    <img src="{{imageUrl}}" class="smallImage" alt="IMAGE NOT FOUND">
 
-</div>
+</div> {{!--  Close itemCard --}}
 
-<div class="itemButtons">   
-    <div class="currentBid">Highest Bid: ${{currentBid}}</div>
-    <div class="auctionEnd">Auction ends: {{auctionEnd}}</div>
-    <button class="btn-danger bid-btn" data-category="{{id}}" data-toggle="modal" data-target="#modal{{id}}">Bid Now!</button>
-</div>
-<!-- Modal -->
+{{!-- Modal --}}
 <div class="modal fade" id="modal{{id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -55,9 +67,11 @@
         </div>
         
         <div class="row">
-          <div class="col-sm-6 col-md-6 col-lg-6 currentBid">Current Price: {{currentBid}}</div>
+          <div class="col-sm-1 col-md-1 col-lg-1"></div>
+          <div class="col-sm-5 col-md-5 col-lg-5 currentBid">Current Price: {{currentBid}}</div>
           <div class="col-sm-1 col-md-1 col-lg-1 usdIcon"><i class="fa fa-usd"></i></div>
-          <input class="col-sm-5 col-md-5 col-lg-5" type="number" min="0.01" step="0.01" max="2500" class="row" type="text">
+          <input class="col-sm-4 col-md-4 col-lg-4" type="number" min="0.01" step="0.01" max="2500" class="row" type="text">
+          <div class="col-sm-1 col-md-1 col-lg-1"></div>
         </div>
         
 
